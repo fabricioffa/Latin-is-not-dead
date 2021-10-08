@@ -1,0 +1,33 @@
+.books-content {
+    display: grid;
+    grid: 1.5fr 4fr 4fr .5fr / repeat(4, 1fr);
+    gap: 5vh 1vw;
+    padding: 2vh 1vw;
+}
+
+.books-content div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color:  var(--light-primary-color);
+    border-radius: var(--global-radius);
+}
+
+.books img {
+    width: 13vw;
+}
+
+.books h2 {
+    grid-column: 1 / span 4;
+}
+
+.books h5 {
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+.books p {
+    font-weight: bold;
+    padding-top: 2vh;
+}

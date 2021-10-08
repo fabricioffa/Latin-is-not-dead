@@ -1,0 +1,34 @@
+footer {
+    min-height: 10vh;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: var(--global-radius);
+    background-color: var(--light-primary-color);
+}
+
+footer div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+}
+
+footer li {
+    padding: 1vh .5vw 0vh .5vw;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+}
+
+footer p {
+    font-size: 1.8rem;
+    font-style: italic;
+    padding-bottom: 1vh;
+}

@@ -1,0 +1,38 @@
+
+.menu {
+    /* background-color: rgb(231, 222, 222); */
+    background: var(--light-primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu h1 {
+    font-size: 5rem;
+    padding-left: 4rem;
+}
+
+.menu ul{
+    display: flex;
+    font-size: 3rem;
+}
+
+.menu li a{
+    display: block;
+    padding: 2rem 4rem;
+    transition: 0.3s ease-in-out;
+}
+
+
+.menu li a:hover{
+    border-radius: var(--global-radius);
+    background-color: #75E6DA;
+}

@@ -1,0 +1,63 @@
+@media screen and (max-width: 1050px){
+
+    /* Global */
+
+    body {
+        margin: 0; /* Logo is no more on the top*/
+    }
+    
+    section {
+        padding-left: 20%; /* Logo is now on the left*/
+    }
+    
+    .main-content {
+        border-radius: var(--global-radius);
+        background-color: var(--primary-color);
+        margin: 0;
+        margin-bottom: 5vh;
+        max-width: 100%;
+        min-height: 100vh;
+    }
+    
+    /* Menu */
+
+    .menu {
+        background-color: var(--light-primary-color);
+        position: fixed;
+        width: 20%;
+        height: 100%;
+        overflow: auto;
+    }
+    
+    .menu-content {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .menu h1 {
+        font-size: 5vw;
+        margin: 2vw 2vw 0vw 2vw;
+    }
+    
+    .menu ul{
+        font-size: 4vw;
+        flex-flow: column;
+    }
+
+    .menu li {
+        padding: 4vw 0;
+    }
+    
+    .menu li a {
+        padding: 2vw 4.5vw;    
+    }
+
+    /* Intro */
+
+    .intro img {
+        float: left;
+    }
+}
+
+/* @media screen and (max-width: 1050px){
+} */

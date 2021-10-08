@@ -1,0 +1,35 @@
+.podcast-content {
+    display: grid;
+    grid: 1.5fr 4fr 1.2fr / repeat(3, 1fr);
+    gap: 5vh 1vw;
+    padding: 2vh 1vw;
+}
+
+.podcast-content div {
+    background-color: var(--light-primary-color);
+    border-radius: var(--global-radius);
+}
+
+.podcast h2 {
+    grid-column: 1 / span 3;
+}
+
+.podcast h4 {
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: 3px dashed #fff;
+}
+
+.podcast ul {
+    text-align: center;
+    line-height: 6vh;
+}
+
+.podcast li:hover {
+    background-color: var(--primary-color);
+}
+
+.podcast a {
+    display: block;
+}

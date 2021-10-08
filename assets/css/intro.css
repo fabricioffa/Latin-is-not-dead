@@ -1,0 +1,23 @@
+.intro-content {
+    display: grid;
+    grid: 1fr 5fr / 1fr 1fr;
+    padding: 2vh 2vw;
+    gap: 5vh 1vw;
+}
+
+.intro-text-box {
+    height: 80vh;
+    padding: 2vh 2vw;
+    overflow: auto;
+    border-radius: var(--global-radius);
+    background-color: var(--light-primary-color);
+}
+
+.intro h1 {
+    grid-column: 1 / span 2;
+}
+
+.intro img {
+    border-radius: var(--global-radius);
+    width: 30vw;
+}
