@@ -1,15 +1,3 @@
-.intro-container {
-    padding: 0 2vw;
-    text-align: center;
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 5vh 1vw;
-    padding: 6vh 0vw 2vh 0vw;
-}
-
 .intro-text-box {
     height: 85vh;
     padding: 2vh 2vw;
@@ -19,6 +7,5 @@
 }
 
 .intro img {
-    border-radius: var(--global-radius);
-    width: 100%;
+    margin: 0;
 }

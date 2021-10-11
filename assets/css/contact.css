@@ -1,11 +1,5 @@
-.contact-container {
-    padding: 0 2vw;
-}
-.contact h2 {
-    grid-column: 1 / span 2;
-}
-
 .contact form {
+    text-align: initial; /* Exception to the container global settings*/
     display: flex;
     flex-flow: column;
     width: 100%;

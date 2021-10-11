@@ -1,24 +1,7 @@
-.books-container {
-    padding: 0 2vw;
-    text-align: center;
-}
-
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 5vh 1vw;
-    padding: 6vh 0vw 2vh 0vw;
-}
-
 .books-brid-item {
     padding: 2vh 2vw;
     background-color:  var(--light-primary-color);
     border-radius: var(--global-radius);
-}
-
-.books img {
-    width: 300px;
-    padding: 3vh 0;
 }
 
 .books p {
