@@ -1,4 +1,4 @@
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1366px){
 
     /* Global */
 
@@ -41,7 +41,7 @@
 
     .menu h1 {
         font-size: 5vw;
-        margin: 2vw 2vw 0vw 2vw;
+        padding: 2vh 2vw 2vh 2vw;
     }
     
     .menu ul{
@@ -56,12 +56,6 @@
     .menu li a {
         padding: 2vw 4.5vw;    
     }
-
-    /* Intro */
-
-    .intro img {
-        float: left;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -72,4 +66,11 @@
     section {
         padding-left: 0; /* Logo is now on the left*/
     }
+}
+
+@media screen and (max-width: 320px) {
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
 }
