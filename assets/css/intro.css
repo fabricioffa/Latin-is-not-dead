@@ -1,23 +1,24 @@
-.intro-content {
+.intro-container {
+    padding: 0 2vw;
+    text-align: center;
+}
+
+.intro-grid {
     display: grid;
-    grid: 1fr 5fr / 1fr 1fr;
-    padding: 2vh 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 5vh 1vw;
+    padding: 6vh 0vw 2vh 0vw;
 }
 
 .intro-text-box {
-    height: 80vh;
+    height: 85vh;
     padding: 2vh 2vw;
     overflow: auto;
     border-radius: var(--global-radius);
     background-color: var(--light-primary-color);
 }
 
-.intro h1 {
-    grid-column: 1 / span 2;
-}
-
 .intro img {
     border-radius: var(--global-radius);
-    width: 30vw;
+    width: 100%;
 }
