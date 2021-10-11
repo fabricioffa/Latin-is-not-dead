@@ -5,8 +5,7 @@
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
-    justify-content:space-around;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 5vh 1vw;
     padding: 6vh 0vw 2vh 0vw;
 }

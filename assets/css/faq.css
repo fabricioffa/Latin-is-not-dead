@@ -1,18 +1,16 @@
-.faq-content {
-    display: grid;
-    grid-template-rows: 1fr 4fr;
+.faq-container  {
+    padding: 0 2vw;
     text-align: center;
-    padding: 2vh 1vw;
 }
 
 .questions-box {
-    margin: 5% 10% 0 10%;
+    padding: 6vh 10% 0vh 10%;
 }
 
-.questions-box div {
+.question {
     background: var(--light-primary-color);
     border-radius: var(--global-radius);
-    margin: 2vh 0;
+    margin-bottom: 2vh;
 }
 
 .faq h5 {
@@ -21,5 +19,5 @@
 }
 
 .faq p {
-    margin: 0 10%;
+    text-indent: 10%;
 }
