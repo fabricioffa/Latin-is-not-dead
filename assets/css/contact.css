@@ -1,17 +1,8 @@
-.contact-content {
-    display: grid;
-    grid: 1fr 4fr / 1fr;
-    padding: 2vh 1vw;
-    gap: 5vh 2vw;
+.contact-container {
+    padding: 0 2vw;
 }
-
 .contact h2 {
     grid-column: 1 / span 2;
-}
-
-.contact img {
-    width: 30vw;
-    border-radius: var(--global-radius);
 }
 
 .contact form {
@@ -19,6 +10,7 @@
     flex-flow: column;
     width: 100%;
     padding: 2vh 1vw;
+    margin: 6vh 0 2vh 0;
     border-radius: var(--global-radius);
     background-color: var(--light-primary-color);
 }
@@ -29,10 +21,9 @@
 
 .contact input {
     height: 3vh;
-    width: auto;
     margin-bottom: 2vh;
-    padding: 0 1vw;
     border-radius: var(--global-radius);
+    text-indent: 1vw;
 }
 
 .contact textarea {
