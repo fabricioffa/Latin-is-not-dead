@@ -67,24 +67,29 @@ img {
 .main-content {
     background: var(--primary-color);
     border-radius: var(--global-radius);
-    margin: 7vh 15%;
+    margin: 7vh 10%;
     min-height: 100vh;
+}
+
+
+.bg-img {
+    position: fixed;
+    bottom: .8vh;
+    height: 90vh;
+    width: 9vw;
+    opacity: 0.3;
+}
+
+.left {
+    left: 1vh;
+}
+
+.right {
+    right: 1vh;
 }
 
 .header {
     text-align: center;
-    padding-top: 6vh;
+    padding: 6vh 0vh;
     border-bottom: 6px double #fff;
-}
-
-.bg-img {
-    position: fixed;
-    bottom: 0;
-    height: 90vh;
-    width: 13vw;
-    opacity: 0.3;
-}
-
-.right {
-    right: 0;
 }
