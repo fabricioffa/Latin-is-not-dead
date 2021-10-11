@@ -93,9 +93,10 @@ img {
 }
 
 .header {
-    text-align: center;
     padding: 6vh 0vh;
     border-bottom: 6px double #fff;
+    text-align: center;
+    line-height: 10vh;
 }
 
 .grid{

@@ -59,8 +59,18 @@
 }
 
 @media screen and (max-width: 600px) {
+    .main-content {
+        margin-top: 7vh;
+    }
+
     .menu {
         display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul {
+        width: 100vw;
     }
 
     section {
@@ -69,6 +79,7 @@
 }
 
 @media screen and (max-width: 320px) {
+
     .grid{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
