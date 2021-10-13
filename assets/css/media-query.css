@@ -1,15 +1,13 @@
-@media screen and (max-width: 1366px){
-
+@media screen and (max-width: 1366px) {
     /* Global */
-
     body {
-        margin: 0; /* Logo is no more on the top*/
+        margin: 0;
+        /* Logo is no more on the top*/
     }
-    
     section {
-        padding-left: 20%; /* Logo is now on the left*/
+        padding-left: 20%;
+        /* Logo is now on the left*/
     }
-    
     .main-content {
         border-radius: var(--global-radius);
         background-color: var(--primary-color);
@@ -18,70 +16,58 @@
         max-width: 100%;
         min-height: 100vh;
     }
-
     .bg-img {
         display: none;
-        
     }
-    
     /* Menu */
-
-    .menu {
+    .menu-container {
+        flex-flow: column;
         background-color: var(--light-primary-color);
+        justify-content: unset;
         position: fixed;
         width: 20%;
         height: 100%;
         overflow: auto;
     }
-    
-    .menu-content {
-      flex-flow: column;
-      align-items: center;
-    }
-
     .menu h1 {
         font-size: 5vw;
-        padding: 2vh 2vw 2vh 2vw;
+        padding: 3vh 2vw 2vh 2vw;
     }
-    
-    .menu ul{
+    .menu ul {
         font-size: 4vw;
+        height: 85vh;
         flex-flow: column;
+        justify-content: space-around;
     }
-
-    .menu li {
-        padding: 4vw 0;
-    }
-    
     .menu li a {
-        padding: 2vw 4.5vw;    
+        padding: 1.5vw;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .main-content {
-        margin-top: 7vh;
-    }
-
-    .menu {
+    .menu-container {
         display: none;
         width: 100%;
         text-align: center;
     }
-
+    .menu h1 {
+        font-size: 5rem;
+    }
+    .menu h1 a {
+        font-size: 5rem;
+    }
     .menu ul {
         width: 100vw;
+        font-size: 3rem;
     }
-
     section {
-        padding-left: 0; /* Logo is now on the left*/
+        /* Logo is now on the left*/
+        padding-left: 0;
     }
 }
 
 @media screen and (max-width: 320px) {
-
-    .grid{
+    .grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    
 }

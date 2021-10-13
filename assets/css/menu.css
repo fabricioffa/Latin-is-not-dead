@@ -1,17 +1,11 @@
-
-.menu {
-    /* background-color: rgb(231, 222, 222); */
-    background: var(--light-primary-color);
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-.menu-content {
+.menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    background: var(--light-primary-color);
+    position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -20,43 +14,36 @@
     padding-left: 4rem;
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     font-size: 3rem;
 }
 
-.menu li a{
+.menu li a {
     display: block;
     padding: 2rem 4rem;
     transition: 0.3s ease-in-out;
 }
 
-
-.menu li a:hover{
+.menu li a:hover {
     border-radius: var(--global-radius);
     background-color: #75E6DA;
 }
 
+/* -=======
+    MOBILE
+    ========*/
 
-.hamburguer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    background-color: var(--light-primary-color);
-}
-
-.hamburguer input {
-    /* display: none; */
+#hamburguer-toogle {
     position: absolute;
-    top: -20px;
+    top: -2vh;
 }
 
 .fas {
-    position: absolute;
+    position: fixed;
     top: 1vh;
     right: 2vw;
-    text-align: right;
+    z-index: 2;
     font-size: 40px;
+    color: #fff;
 }
-
