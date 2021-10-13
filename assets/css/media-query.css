@@ -45,6 +45,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    .hamburguer {
+        display: initial;
+    }
+
     .menu-container {
         display: none;
         width: 100%;

@@ -30,13 +30,17 @@
     background-color: #75E6DA;
 }
 
+#hamburguer-toogle {
+    position: absolute;
+    top: -5vh;
+}
+
 /* -=======
     MOBILE
     ========*/
 
-#hamburguer-toogle {
-    position: absolute;
-    top: -2vh;
+.hamburguer {
+    display: none;
 }
 
 .fas {
