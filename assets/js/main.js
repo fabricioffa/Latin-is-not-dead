@@ -1,7 +1,6 @@
 const menuLinks = document.querySelectorAll('.menu a');
 const grids = document.querySelectorAll('.grid');
-
-
+let calls = 0;
 // MENU
 
 // Toogles off the menu when a link is clicked
@@ -66,7 +65,8 @@ class GridControlers {
     }
     
     formatGrids(grids) {
-        
+        calls += 1;
+        console.log(`I was called ${calls} times`);
         grids.forEach(grid => {
             
             if (grid.classList.contains('intro-grid')) return;
@@ -85,7 +85,13 @@ class GridControlers {
 const gridControlers = new GridControlers;
 
 window.addEventListener('resize', () => {
-    gridControlers.formatGrids(grids);
+    let timeOut = false;
+    const delay = 250;
+    
+    clearTimeout(timeOut);
+    
+    timeOut = setTimeout(() => gridControlers.formatGrids(grids), delay);
+    // gridControlers.formatGrids(grids)
 });
 
 window.addEventListener('load', () => {
