@@ -11,6 +11,30 @@
 
 }
 
+@keyframes pointing-left {
+    from {
+        padding-left: 2%;
+    }
+
+    to {
+        padding-left: 3%;
+    }
+
+}
+
+@keyframes pointing-right {
+    from {
+        padding-right: 2%;
+    }
+
+    to {
+        padding-right: 3%;
+    }
+
+}
+
+
+
 :root {
     --primary-color: #75E6DA;
     --secondary-color: #189AB4;
@@ -36,8 +60,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     ;
     line-height: 3rem;
-    margin-top: 7rem;
     /* move out the  nav bar */
+    margin-top: 7rem;
 }
 
 h1 {
@@ -89,7 +113,6 @@ img {
     background: var(--primary-color);
     border-radius: var(--global-radius);
     margin: 7vh 10%;
-    /* min-height: 100vh; */
 }
 
 .bg-img {
@@ -122,9 +145,11 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 5vh 1vw;
     padding: 6vh 0vw 2vh 0vw;
+    transition: all .5s ease-in-out;
 }
 
 .container {
+    position: relative;
     padding: 0 2vw 1vh 2vw;
     text-align: center;
 }

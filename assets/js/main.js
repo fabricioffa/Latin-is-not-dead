@@ -1,12 +1,12 @@
 const menuLinks = document.querySelectorAll('.menu a');
 const grids = document.querySelectorAll('.grid');
 let calls = 0;
+
 // MENU
 
 // Toogles off the menu when a link is clicked
 
 menuLinks.forEach(link => link.addEventListener('click', e => {
-    // scrolling to top??
     let hamburguerToogle = document.querySelector('#hamburguer-toogle');
     hamburguerToogle.checked = false;
 }))
@@ -74,17 +74,16 @@ class GridControler {
             const gridItemClass = grid.querySelector('div').classList[0];
             
             this.hideRows(grid, `.${gridItemClass}`)
-            // this.hideRows(grid, `.${gridItemClass}`);
         });
         
         return this;
     }
     
+
 }
 
 const gridCtr = new GridControler;
 
-// Ainda não entendo!
 let timeout = false;
 const delay = 300;
 

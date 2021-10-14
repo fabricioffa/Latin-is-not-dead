@@ -2,11 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    background: var(--light-primary-color);
+
     position: fixed;
     top: 0;
+    z-index: 2;
     width: 100%;
+
+    background: var(--light-primary-color);
 }
 
 .menu h1 {
@@ -34,6 +36,7 @@
     position: fixed;
     bottom: 2vh;
     right: 11vw;
+    z-index: 2;
     font-size: 8vh;
     color: var(--secondary-color);
 }

@@ -4,3 +4,35 @@
     border-radius: var(--global-radius);
     text-align: center;
 }
+
+.courses h2::before {
+    content: "\f0d9";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 6vh;
+    font-weight: 900;
+    padding-right: 2%;
+    padding-bottom: .4%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.courses h2::after {
+    content: "\f0da";
+    display: inline-block;
+    font-size: 6vh;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 2%;
+    padding-bottom: .4%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.courses h2:hover:after {
+    animation: pointing-left 1s 0.3s infinite;
+}
+
+.courses h2:hover:before {
+    animation: pointing-right 1s 0.3s infinite;
+}
