@@ -1,18 +1,3 @@
-const menuLinks = document.querySelectorAll('.menu a');
-const grids = document.querySelectorAll('.grid');
-let calls = 0;
-// MENU
-
-// Toogles off the menu when a link is clicked
-
-menuLinks.forEach(link => link.addEventListener('click', e => {
-    // scrolling to top??
-    let hamburguerToogle = document.querySelector('#hamburguer-toogle');
-    hamburguerToogle.checked = false;
-}))
-
-// GRIDS
-
 class GridControler {
     
     countColumns(grid) {
@@ -81,19 +66,3 @@ class GridControler {
     }
     
 }
-
-const gridCtr = new GridControler;
-
-// Ainda não entendo!
-let timeout = false;
-const delay = 300;
-
-window.addEventListener('resize', () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => gridCtr.formatGrids(grids), delay);
-});
-
-window.addEventListener('load', () => {
-    gridCtr.formatGrids(grids);
-});
-

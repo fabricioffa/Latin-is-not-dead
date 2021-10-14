@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+
+}
+
 :root {
     --primary-color: #75E6DA;
     --secondary-color: #189AB4;
@@ -68,11 +80,16 @@ img {
     border-radius: var(--global-radius);
 }
 
+    /* =========
+       Classes
+    ===========*/
+
+
 .main-content {
     background: var(--primary-color);
     border-radius: var(--global-radius);
     margin: 7vh 10%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .bg-img {
@@ -108,6 +125,6 @@ img {
 }
 
 .container {
-    padding: 0 2vw;
+    padding: 0 2vw 1vh 2vw;
     text-align: center;
 }

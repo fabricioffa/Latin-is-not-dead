@@ -22,28 +22,34 @@
 .menu li a {
     display: block;
     padding: 2rem 4rem;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu li a:hover {
     border-radius: var(--global-radius);
-    background-color: #75E6DA;
+    background-color: var(--primary-color);
 }
+
+.arrow-up {
+    position: fixed;
+    bottom: 2vh;
+    right: 11vw;
+    font-size: 8vh;
+    color: var(--secondary-color);
+}
+
+
+    /* -=======
+      MOBILE
+    ========*/
 
 #hamburguer-toogle {
     position: absolute;
     top: -5vh;
 }
 
-/* -=======
-    MOBILE
-    ========*/
-
-.hamburguer {
+.nav-icons label {
     display: none;
-}
-
-.fas {
     position: fixed;
     top: 1vh;
     right: 2vw;

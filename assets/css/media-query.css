@@ -19,7 +19,9 @@
     .bg-img {
         display: none;
     }
+
     /* Menu */
+
     .menu-container {
         flex-flow: column;
         background-color: var(--light-primary-color);
@@ -42,14 +44,20 @@
     .menu li a {
         padding: 1.5vw;
     }
+    
+    .arrow-up {
+        right: 2vw;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .hamburguer {
+
+    .nav-icons label {
         display: initial;
     }
 
     #hamburguer-toogle:checked + .menu-container{
+        animation: slidein 1s ease-in-out normal;
         display: flex;
     }
 
@@ -58,16 +66,20 @@
         width: 100%;
         text-align: center;
     }
+    
     .menu h1 {
         font-size: 5rem;
     }
+
     .menu h1 a {
         font-size: 5rem;
     }
+
     .menu ul {
         width: 100vw;
         font-size: 3rem;
     }
+
     section {
         /* Logo is now on the left*/
         padding-left: 0;

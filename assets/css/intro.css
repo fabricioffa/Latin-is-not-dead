@@ -1,4 +1,5 @@
 .intro-text-box {
+    display: block;
     height: 85vh;
     padding: 2vh 2vw;
     overflow: auto;
