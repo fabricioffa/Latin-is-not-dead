@@ -11,18 +11,18 @@
 
 .contact label {
     padding-bottom: 1vh;
+    margin-top: 2vh;
 }
 
 .contact input {
     height: 3vh;
-    margin-bottom: 2vh;
     border-radius: var(--global-radius);
     text-indent: 1vw;
 }
 
 .contact textarea {
     padding: 1vh 1vw;
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
     border-radius: 15px;
 }
 
@@ -35,4 +35,12 @@
     border-radius: var(--global-radius);
     background: var(--primary-color);
     cursor: pointer;
+}
+
+.error-msg {
+    font-size: 1.5rem;
+    font-style: bold;
+
+    text-indent: 1vw;
+    color: red;
 }
