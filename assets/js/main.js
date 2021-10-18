@@ -1,6 +1,3 @@
-// import validator from 'validator';
-
-
 const menuLinks = document.querySelectorAll('.menu a');
 const grids = document.querySelectorAll('.grid');
 const contactUs = document.querySelector('.contact form');
@@ -16,7 +13,7 @@ menuLinks.forEach(link => link.addEventListener('click', e => {
 
 // GRIDS
 
-class GridControler {
+class GridConttroler {
 
     countColumns(grid) {
         const columnsNumber = window.getComputedStyle(grid)
@@ -83,7 +80,7 @@ class GridControler {
 
 }
 
-const gridCtr = new GridControler;
+const gridCtr = new GridConttroler;
 
 let timeout = false;
 const delay = 300;
@@ -132,18 +129,20 @@ class FormValidator {
         let valid = true;
         const { name, surname, country, email, massage } = this.form;
 
-        if (this.areThereEmpties()) return valid = false;
+        // if (this.areThereEmpties()) return valid = false;
 
-  
-        if (name.value.length < 2 || name.value.length > 30) {
-            this.displayErrors(name, 'Name must have betweeen 2 and 30 characters.')
-            valid = false;
-        }
+        [name, surname, country].forEach(input => {
+            if (input.value.length < 2 || input.value.length > 30) {
+                this.displayErrors(input, `${input.getAttribute('name')} must have betweeen 2 and 30 characters.`)
+                valid = false;
+            }
 
-        if (surname.value.length < 2 || surname.value.length > 30) {
-            this.displayErrors(surname, 'Surname must have betweeen 2 and 30 characters.')
-            valid = false;
-        }
+            if(/\d/.test(input.value)) {
+                this.displayErrors(input, `${input.getAttribute('name')} must contain letter only.`)
+                valid = false;
+            }
+
+        })
 
         
         return valid;
