@@ -16,8 +16,14 @@
 .faq h5 {
     text-align: left;
     padding: 2vh 1vw;
+    cursor: pointer;
 }
 
 .faq p {
+    display: none;
     text-indent: 10%;
+}
+
+.faq h5:focus + p{
+    display: inline;
 }

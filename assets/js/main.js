@@ -83,7 +83,7 @@ class GridConttroler {
 const gridCtr = new GridConttroler;
 
 let timeout = false;
-const delay = 300;
+const delay = 250;
 
 window.addEventListener('resize', () => {
     clearTimeout(timeout);
@@ -111,25 +111,23 @@ class FormValidator {
             this.eventHandler(e)
         })
     }
-
+    
     eventHandler(e) {
         e.preventDefault();
-
+        
         document.querySelectorAll('.error-msg')
             .forEach(el => el.remove());
 
-        if (!this.isValid()) {
-            console.log('Deu ruim');
+        if (!this.isValid()) return;
 
-            return;
-        }
+        e.target.submit();
     }
 
     isValid() {
         let valid = true;
         const { name, surname, country, email, massage } = this.form;
 
-        // if (this.areThereEmpties()) return valid = false;
+        if (this.areThereEmpties()) return valid = false;
 
         [name, surname, country].forEach(input => {
             if (input.value.length < 2 || input.value.length > 30) {
@@ -179,4 +177,3 @@ class FormValidator {
 }
 
 const formValidator = new FormValidator(contactUs);
-formValidator.isValid();

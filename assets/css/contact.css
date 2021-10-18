@@ -22,7 +22,7 @@
 
 .contact textarea {
     padding: 1vh 1vw;
-    /* margin-bottom: 2vh; */
+    margin-bottom: 2vh;
     border-radius: 15px;
 }
 
@@ -39,7 +39,7 @@
 
 .error-msg {
     font-size: 1.5rem;
-    font-style: bold;
+    font-weight: bold;
 
     text-indent: 1vw;
     color: red;
