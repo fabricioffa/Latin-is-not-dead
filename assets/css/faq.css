@@ -11,19 +11,30 @@
     background: var(--light-primary-color);
     border-radius: var(--global-radius);
     margin-bottom: 2vh;
-}
-
-.faq h5 {
-    text-align: left;
-    padding: 2vh 1vw;
     cursor: pointer;
 }
 
-.faq p {
+.question h5 {
+    position: relative;
+    text-align: left;
+    padding: 2vh 1vw;
+}
+
+.question p {
     display: none;
     text-indent: 10%;
 }
 
-.faq h5:focus + p{
-    display: inline;
-}
+/* .question h5::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border-left: .8vh solid black;
+    border-top: .8vh solid transparent;
+    border-bottom: .8vh solid transparent;
+    margin-top: -8px;
+    margin-left: 13px;
+} */
+

@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.courses h2::before {
+/* .courses h2::before {
     content: "\f0d9";
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -35,4 +35,4 @@
 
 .courses h2:hover:before {
     animation: pointing-right 1s 0.3s infinite;
-}
+} */

@@ -1,4 +1,4 @@
-export default class GridConttrolers {
+class GridConttroler {
 
     countColumns(grid) {
         const columnsNumber = window.getComputedStyle(grid)
@@ -61,6 +61,7 @@ export default class GridConttrolers {
 
         return this;
     }
-
-
 }
+
+const instance = new GridConttroler;
+export default instance;
