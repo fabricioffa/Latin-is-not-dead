@@ -21,8 +21,8 @@ class GridConttroler {
         return itemsNum;
     }
 
-    hideRows(grid, itemSelector) {
-        this.showRows(grid, itemSelector);
+    hideOtherRows(grid, itemSelector) {
+        this.showFirstRow(grid, itemSelector);
 
         if (this.countRows(grid) > 1) {
             const gridItems = Array.from(grid.querySelectorAll(itemSelector));
@@ -37,7 +37,7 @@ class GridConttroler {
         return this;
     }
 
-    showRows(grid, itemSelector) {
+    showFirstRow(grid, itemSelector) {
         const gridItems = Array.from(grid.querySelectorAll(itemSelector));
         const colsPerRow = this.countColumns(grid);
         const firstRowCols = gridItems.slice(0, colsPerRow);
@@ -56,7 +56,7 @@ class GridConttroler {
 
             const gridItemClass = grid.querySelector('div').classList[0];
 
-            this.hideRows(grid, `.${gridItemClass}`)
+            this.hideOtherRows(grid, `.${gridItemClass}`)
         });
 
         return this;

@@ -5,7 +5,23 @@
     text-align: center;
 }
 
-/* .courses h2::before {
+.courses .fa-caret-left {
+    position: absolute;
+    left: 2vw;
+    top: 8vh;
+    font-size: 6vh;
+    cursor: pointer;
+}
+
+.courses .fa-caret-right {
+    position: absolute;
+    right: 2vw;
+    top: 8vh;
+    font-size: 6vh;
+    cursor: pointer;
+}
+
+/* .courses::before {
     content: "\f0d9";
     display: inline-block;
     font-family: "Font Awesome 5 Free";
@@ -17,7 +33,7 @@
     cursor: pointer;
 }
 
-.courses h2::after {
+.courses::after {
     content: "\f0da";
     display: inline-block;
     font-size: 6vh;
@@ -27,12 +43,5 @@
     padding-bottom: .4%;
     vertical-align: middle;
     cursor: pointer;
-}
-
-.courses h2:hover:after {
-    animation: pointing-left 1s 0.3s infinite;
-}
-
-.courses h2:hover:before {
-    animation: pointing-right 1s 0.3s infinite;
 } */
+

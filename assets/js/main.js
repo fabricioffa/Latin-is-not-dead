@@ -58,25 +58,3 @@ questions.forEach(question => question.addEventListener('click', e => {
 
 
 
-
-// questionBox.addEventListener('click', e => {
-//     const answer = e.target.nextElementSibling;
-    
-//     if (answer.style.display === 'none') answer.style.display = 'inline';
-//     // elem.nextElementSibling.style.display = 'none';
-//     answer.style.display = 'none';
-//     console.log()
-
-// })
-
-// questions.forEach(question => {
-//     question.addEventListener('click', e => {
-//         const answer = e.target.nextSibling;
-//         console.log(answer);
-//         // if (answer.style.display === 'none') answer.style.display === 'inline';
-//         // answer.style.display === 'none';
-//     });
-// });
-
-
-
