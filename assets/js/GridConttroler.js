@@ -61,6 +61,39 @@ class GridConttroler {
 
         return this;
     }
+    
+    slideGrid(grid, direction) {
+        const gridItemClass = grid.querySelector('div').classList[0];
+        const gridItems = Array.from(grid.querySelectorAll(`.${gridItemClass}`));
+        const colsPerRow = this.countColumns(grid);
+
+        let newRowIndex = [];
+
+        gridItems.forEach((item, index) => {
+            if (item.style.display === 'block') newRowIndex.push(index);
+        });
+        newRowIndex = newRowIndex.map(item => item + colsPerRow);
+        console.log(newRowIndex);
+        
+        gridItems.forEach(item => item.style.display = 'none')
+        
+        if (direction === 'right') {
+            for (let num of newRowIndex) {
+                
+                console.log(gridItems[num]);
+                gridItems[num].style.display = 'block'
+           }
+        }
+
+
+        console.log("Left indisponícel")
+
+        // Em que linha está:
+            // Selecionar os itens com display block
+                // fazer um loop, pegar o índice do último (ou primeiro) item com display block
+                // Ocultar os itens antes mostrados e exibir os seguintes (ou anteriores)
+        // Mostrar a próxima ou anterior
+    }
 }
 
 const instance = new GridConttroler;

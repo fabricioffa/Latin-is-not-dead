@@ -32,6 +32,17 @@ window.addEventListener('load', () => {
     gridConttroler.formatGrids(grids);
 });
 
+
+const btn = document.querySelector('.fa-caret-right');
+const courseGrid = document.querySelector('.course-grid');
+
+btn.addEventListener('click', () => {
+    // console.log(courseGrid);
+    gridConttroler.slideGrid(courseGrid, 'right');
+});
+
+
+
 //
 //  F.A.Q.
 //
@@ -54,7 +65,6 @@ questions.forEach(question => question.addEventListener('click', e => {
 
     answer.style.display = 'none';
 }))
-
 
 
 
