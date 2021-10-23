@@ -33,12 +33,18 @@ window.addEventListener('load', () => {
 });
 
 
-const btn = document.querySelector('.fa-caret-right');
+const btnRight = document.querySelector('.fa-caret-right');
+const btnLeft = document.querySelector('.fa-caret-left');
 const courseGrid = document.querySelector('.course-grid');
 
-btn.addEventListener('click', () => {
+btnRight.addEventListener('click', () => {
     // console.log(courseGrid);
     gridConttroler.slideGrid(courseGrid, 'right');
+});
+
+btnLeft.addEventListener('click', () => {
+    // console.log(courseGrid);
+    gridConttroler.slideGrid(courseGrid, 'left');
 });
 
 
