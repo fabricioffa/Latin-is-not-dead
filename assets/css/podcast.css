@@ -1,6 +1,8 @@
 .podcast-grid-item {
     background-color: var(--light-primary-color);
     border-radius: var(--global-radius);
+    box-shadow: -1px 5px 23px 5px rgba(5,68,94,0.40);
+
 }
 
 .podcast h4 {

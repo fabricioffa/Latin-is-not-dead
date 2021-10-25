@@ -12,6 +12,12 @@
     border-radius: var(--global-radius);
     margin-bottom: 2vh;
     cursor: pointer;
+    box-shadow: -1px 5px 23px 2px rgba(5,68,94,0.40);
+}
+
+.question:hover {
+    box-shadow: -1px 5px 23px 10px rgba(5,68,94,0.40);
+    transform: scale(1.02);
 }
 
 .question h5 {

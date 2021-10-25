@@ -33,6 +33,8 @@ window.addEventListener('load', () => {
     gridConttroler.formatGrids(grids);
 });
 
+// TODO : Hide buttons when all itens are displayed
+
 slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
     if (btn.classList.contains('fa-caret-right')) {
         const grid = e.target.nextElementSibling;
@@ -52,6 +54,8 @@ slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
 //
 
 const questions = document.querySelectorAll('.question');
+
+// ! Bug: First click doesn't work
 
 questions.forEach(question => question.addEventListener('click', e => {
 

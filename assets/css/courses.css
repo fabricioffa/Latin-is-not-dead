@@ -3,4 +3,5 @@
     background: var(--light-primary-color);
     border-radius: var(--global-radius);
     text-align: center;
+    box-shadow: -1px 5px 23px 5px rgba(5,68,94,0.40);
 }
