@@ -146,6 +146,22 @@ img {
     transition: all .5s ease-in-out;
 }
 
+.fa-caret-left {
+    position: absolute;
+    left: 2vw;
+    top: 8vh;
+    font-size: 6vh;
+    cursor: pointer;
+}
+
+.fa-caret-right {
+    position: absolute;
+    right: 2vw;
+    top: 8vh;
+    font-size: 6vh;
+    cursor: pointer;
+}
+
 .container {
     position: relative;
     padding: 0 2vw 1vh 2vw;

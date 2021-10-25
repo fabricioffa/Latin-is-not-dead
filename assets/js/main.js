@@ -4,6 +4,7 @@ import FormValidator from "./FormValidator.js";
 const menuLinks = document.querySelectorAll('.menu a');
 const grids = document.querySelectorAll('.grid');
 const contactUs = document.querySelector('.contact form');
+const slideBtns = document.querySelectorAll('.slide-btn');
 
 const formValidator = new FormValidator(contactUs);
 
@@ -32,20 +33,17 @@ window.addEventListener('load', () => {
     gridConttroler.formatGrids(grids);
 });
 
+slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
+    if (btn.classList.contains('fa-caret-right')) {
+        const grid = e.target.nextElementSibling;
+        console.log(grid)
+        gridConttroler.slideGrid(grid, 'right');
+        return;
+    }
 
-const btnRight = document.querySelector('.fa-caret-right');
-const btnLeft = document.querySelector('.fa-caret-left');
-const courseGrid = document.querySelector('.course-grid');
-
-btnRight.addEventListener('click', () => {
-    // console.log(courseGrid);
-    gridConttroler.slideGrid(courseGrid, 'right');
-});
-
-btnLeft.addEventListener('click', () => {
-    // console.log(courseGrid);
-    gridConttroler.slideGrid(courseGrid, 'left');
-});
+    const grid = e.target.previousElementSibling;
+    gridConttroler.slideGrid(grid, 'left');
+}));
 
 
 

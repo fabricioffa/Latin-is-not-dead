@@ -75,7 +75,6 @@ class GridConttroler {
         if (direction === 'right') {
 
             newRowIndex = newRowIndex.map(item => item + colsPerRow);
-            console.log(newRowIndex);
             if (newRowIndex.at(0) >= gridItems.length) return this.hideOtherRows(grid);
             
             if (newRowIndex.at(-1) > gridItems.length - 1) {
