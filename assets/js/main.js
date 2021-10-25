@@ -35,11 +35,23 @@ window.addEventListener('load', () => {
 
 // TODO : Hide buttons when all itens are displayed
 
+grids.forEach(grid => {
+    console.log('Fui chamado')
+    if (grid.classList.contains('intro-grid')) return;
+    console.log(grid)
+    console.log(gridConttroler.isAllVisible(grid))
+    if (gridConttroler.isAllVisible(grid)) {
+        grid.nextElementSibling.style.display = 'none';
+        grid.previousElementSibling.style.display = 'none';
+    }
+})
+
 slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
     if (btn.classList.contains('fa-caret-right')) {
         const grid = e.target.nextElementSibling;
-        console.log(grid)
+
         gridConttroler.slideGrid(grid, 'right');
+
         return;
     }
 

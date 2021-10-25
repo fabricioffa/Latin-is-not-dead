@@ -106,6 +106,12 @@ class GridConttroler {
         return gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
             .forEach(item => item.style.display = 'block');
     }
+
+    isAllVisible(grid) {
+        const gridItems = Array.from(grid.querySelectorAll('div'));
+        const visibleItens = gridItems.filter(item => item.style.display === 'block');
+        return gridItems.length === visibleItens.length;
+    }
 }
 
 const instance = new GridConttroler;
