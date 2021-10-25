@@ -70,22 +70,28 @@ class GridConttroler {
             if (item.style.display === 'block') newRowIndex.push(index);
         });
 
+        gridItems.forEach(item => item.style.display = 'none')
+
         if (direction === 'right') {
 
             newRowIndex = newRowIndex.map(item => item + colsPerRow);
-
+            console.log(newRowIndex);
             if (newRowIndex.at(0) >= gridItems.length) return this.hideOtherRows(grid);
+            
+            if (newRowIndex.at(-1) > gridItems.length - 1) {
+                gridItems.slice(-colsPerRow)
+                    .forEach(item => item.style.display = 'block');
+                
+                return;
+            }
 
-            gridItems.forEach(item => item.style.display = 'none')
-
-            return gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
+            gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
                 .forEach(item => item.style.display = 'block');
+
+            return;
         }
 
-        console.log(newRowIndex);
         newRowIndex = newRowIndex.map(item => item - colsPerRow);
-        console.log(newRowIndex);
-        gridItems.forEach(item => item.style.display = 'none');
 
         if (newRowIndex.at(0) < 0 && (newRowIndex.at(-1) + 1) >= 0) {
             if ((newRowIndex.at(-1) + 1) === 0) {
@@ -93,47 +99,13 @@ class GridConttroler {
                     .forEach(item => item.style.display = 'block');
             }
 
-            gridItems.slice(0, newRowIndex.at(-1) + 1)
-                .forEach(item => item.style.display = 'block');
-
-            gridItems.slice(newRowIndex.at(0))
-                .forEach(item => item.style.display = 'block');
+            this.showFirstRow(grid);
 
             return;
         }
 
         return gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
             .forEach(item => item.style.display = 'block');
-
-
-        // Se sobram
-        // se sim:
-        // Apagar as atuais
-        // Mostrar colsPerRow das que sobram
-        // se não:
-        // Chama hideOtherRows
-
-
-
-
-
-
-
-        // if (direction === 'right') {
-        //     for (let num of newRowIndex) {
-
-        //         console.log(gridItems[num]);
-        //         gridItems[num].style.display = 'block'
-        //    }
-        // }
-
-
-
-        // Em que linha está:
-        // Selecionar os itens com display block
-        // fazer um loop, pegar o índice do último (ou primeiro) item com display block
-        // Ocultar os itens antes mostrados e exibir os seguintes (ou anteriores)
-        // Mostrar a próxima ou anterior
     }
 }
 
