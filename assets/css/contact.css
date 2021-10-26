@@ -1,12 +1,13 @@
 .contact form {
-    text-align: initial; /* Exception to the container global settings*/
     display: flex;
     flex-flow: column;
     width: 100%;
     padding: 2vh 1vw;
     margin: 6vh 0 2vh 0;
+    box-shadow: var(--global-box-shadow);
     border-radius: var(--global-radius);
     background-color: var(--light-primary-color);
+    text-align: initial; /* Exception to the container global settings*/
 }
 
 .contact label {

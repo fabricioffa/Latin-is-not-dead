@@ -1,12 +1,13 @@
 .course-grid-item {
+    position: relative;
     padding: 2vh 2vw;
     background: var(--light-primary-color);
     border-radius: var(--global-radius);
+    box-shadow: var(--global-box-shadow);
     text-align: center;
-    box-shadow: -1px 5px 23px 5px rgba(5,68,94,0.40);
 }
 
 .course-grid-item:hover {
-    box-shadow: -1px 5px 23px 10px rgba(5,68,94,0.40);
+    box-shadow: var(--global-box-shadow-on-hover);
     transform: scale(1.02);
 }

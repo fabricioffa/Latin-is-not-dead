@@ -39,6 +39,8 @@
     --dark-secondary-color: #05445E;
     --light-primary-color: #D4F1F4;
     --global-radius: 15px;
+    --global-box-shadow: -1px 5px 23px 5px rgba(5,68,94,0.40);
+    --global-box-shadow-on-hover : -1px 5px 23px 15px rgba(5,68,94,0.40);
 }
 
 * {
