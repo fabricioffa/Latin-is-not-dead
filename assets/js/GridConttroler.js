@@ -53,11 +53,28 @@ class GridConttroler {
         grids.forEach(grid => {
 
             if (grid.classList.contains('intro-grid')) return;
-
             this.hideOtherRows(grid)
+            this.ShowOrHideSlideBtns(grid);
+            
         });
 
         return this;
+    }
+
+    ShowOrHideSlideBtns(grid) {
+        if (this.isAllItemsVisible(grid)) {
+            grid.nextElementSibling.style.display = 'none';
+            grid.previousElementSibling.style.display = 'none';
+            return;
+        }
+        grid.nextElementSibling.style.display = '';
+        grid.previousElementSibling.style.display = '';
+    }
+
+    isAllItemsVisible(grid) {
+        const gridItems = Array.from(grid.querySelectorAll('div'));
+        const visibleItens = gridItems.filter(item => item.style.display === 'block');
+        return gridItems.length === visibleItens.length;
     }
 
     slideGrid(grid, direction) {
@@ -65,7 +82,6 @@ class GridConttroler {
         const colsPerRow = this.countColumns(grid);
 
         let newRowIndex = [];
-
         gridItems.forEach((item, index) => {
             if (item.style.display === 'block') newRowIndex.push(index);
         });
@@ -76,11 +92,11 @@ class GridConttroler {
 
             newRowIndex = newRowIndex.map(item => item + colsPerRow);
             if (newRowIndex.at(0) >= gridItems.length) return this.hideOtherRows(grid);
-            
+
             if (newRowIndex.at(-1) > gridItems.length - 1) {
                 gridItems.slice(-colsPerRow)
                     .forEach(item => item.style.display = 'block');
-                
+
                 return;
             }
 
@@ -107,11 +123,6 @@ class GridConttroler {
             .forEach(item => item.style.display = 'block');
     }
 
-    isAllVisible(grid) {
-        const gridItems = Array.from(grid.querySelectorAll('div'));
-        const visibleItens = gridItems.filter(item => item.style.display === 'block');
-        return gridItems.length === visibleItens.length;
-    }
 }
 
 const instance = new GridConttroler;
