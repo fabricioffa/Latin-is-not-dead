@@ -3,7 +3,14 @@
     background-color: var(--light-primary-color);
     border-radius: var(--global-radius);
     box-shadow: -1px 5px 23px 5px rgba(5,68,94,0.40);
+    cursor: pointer;
 }
+
+.books-grid-item:hover {
+    box-shadow: -1px 5px 23px 10px rgba(5,68,94,0.40);
+    transform: scale(1.02);
+}
+
 
 .books p {
     font-weight: bold;
