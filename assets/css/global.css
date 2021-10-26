@@ -11,13 +11,13 @@
 
 }
 
-@keyframes pointing-left {
+@keyframes color-changing {
     from {
-        padding-left: 2%;
+        color: black;
     }
 
     to {
-        padding-left: 3%;
+        color: white;
     }
 
 }
@@ -162,6 +162,14 @@ img {
     top: 8vh;
     font-size: 6vh;
     cursor: pointer;
+}
+
+.fa-caret-left:hover {
+    transform: scale(1.25);
+}
+
+.fa-caret-right:hover {
+    transform: scale(1.25);
 }
 
 .container {
