@@ -9,17 +9,17 @@ footer {
 footer div {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
 footer ul {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 footer li {
-    padding: 1vh .5vw 0vh .5vw;
+    padding-right: max(12px, 1.5vw);
 }
 
 footer img {
