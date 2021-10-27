@@ -54,18 +54,13 @@ slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
 
 const questions = document.querySelectorAll('.question');
 
-// ! Bug: First click doesn't work
-
 questions.forEach(question => question.addEventListener('click', e => {
-
-    if (e.target.tagName === 'P') {
-        const answer = e.target;
-
-        return answer.style.display = 'none';
+    const answer = question.querySelector('p');
+    
+    if(answer.style.display === '') {
+        return answer.style.display = 'block';
     }
-
-    const answer = e.target.nextElementSibling;
-
+    
     if (answer.style.display === 'none') {
         return answer.style.display = 'block';;
     }

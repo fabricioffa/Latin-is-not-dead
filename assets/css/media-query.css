@@ -32,11 +32,11 @@
         overflow: auto;
     }
     .menu h1 {
-        font-size: 5vw;
+        font-size: clamp(45px, 3.5vw, 40px);
         padding: 3vh 2vw 2vh 2vw;
     }
     .menu ul {
-        font-size: 4vw;
+        font-size: clamp(25px, 3.5vw, 35px);
         height: 85vh;
         flex-flow: column;
         justify-content: space-around;
@@ -68,10 +68,6 @@
     }
     
     .menu h1 {
-        font-size: 5rem;
-    }
-
-    .menu h1 a {
         font-size: 5rem;
     }
 

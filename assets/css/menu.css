@@ -12,13 +12,13 @@
 }
 
 .menu h1 {
-    font-size: 5rem;
+    /* font-size: 5rem; */
     padding-left: 4rem;
 }
 
 .menu ul {
     display: flex;
-    font-size: 3rem;
+    font-size: clamp(20px, 3.5vw, 40px);
 }
 
 .menu li a {

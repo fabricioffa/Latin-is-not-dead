@@ -65,23 +65,23 @@ body {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(60px, 5vw, 70px);
 }
 
 h2 {
-    font-size: 4.5rem;
+    font-size: clamp(50px, 4.5vw, 60px);
 }
 
 h3 {
-    font-size: 4rem;
+    font-size: clamp(40px, 4vw, 50px);
 }
 
 h4 {
-    font-size: 3.5rem;
+    font-size: clamp(30px, 3.5vw, 40px);
 }
 
 h5 {
-    font-size: 3rem;
+    font-size: clamp(20px, 3vw, 30px);
 }
 
 h6 {
