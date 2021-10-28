@@ -37,11 +37,10 @@
     position: absolute;
     width: 0;
     height: 0;
-    top: 50%;
-    border-left: .8vh solid black;
-    border-top: .8vh solid transparent;
-    border-bottom: .8vh solid transparent;
-    margin-top: -8px;
-    margin-left: 13px;
+    top: 35%;
+    border-left: clamp(8px, 1.5vh, 13px) solid black;
+    border-top: clamp(8px, 1.5vh, 13px) solid transparent;
+    border-bottom: clamp(8px, 1.5vh, 13px) solid transparent;
+    margin-left: 14px;
 } */
 

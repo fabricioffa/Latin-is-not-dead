@@ -68,5 +68,6 @@ questions.forEach(question => question.addEventListener('click', e => {
     answer.style.display = 'none';
 }))
 
+console.log(slideBtns)
 
 
