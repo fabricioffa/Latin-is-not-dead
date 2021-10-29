@@ -11,28 +11,6 @@
 
 }
 
-@keyframes color-changing {
-    from {
-        color: black;
-    }
-
-    to {
-        color: white;
-    }
-
-}
-
-@keyframes pointing-right {
-    from {
-        padding-right: 2%;
-    }
-
-    to {
-        padding-right: 3%;
-    }
-
-}
-
 :root {
     --primary-color: #75E6DA;
     --secondary-color: #189AB4;

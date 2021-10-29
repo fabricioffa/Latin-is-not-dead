@@ -27,15 +27,20 @@
     border-radius: 15px;
 }
 
-.contact form button {
+.contact button {
     font-size: 2rem;
     font-family: inherit;
     height: 5vh;
     width: 30%;
     margin: 0 auto; 
+    box-shadow: inset 0px -1px 25px -5px rgba(5,68,94,1);
     border-radius: var(--global-radius);
     background: var(--primary-color);
     cursor: pointer;
+}
+
+.contact button:hover {
+    filter: brightness(1.15);
 }
 
 .error-msg {
