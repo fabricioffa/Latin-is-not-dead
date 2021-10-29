@@ -90,7 +90,7 @@ img {
 
 .bg-img {
     position: fixed;
-    bottom: .8vh;
+    bottom: 0;
     height: 90vh;
     width: 9vw;
     opacity: 0.3;
