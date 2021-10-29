@@ -11,9 +11,14 @@
     background: var(--light-primary-color);
 }
 
-.menu h1 {
-    /* font-size: 5rem; */
-    padding-left: 4rem;
+.menu img {
+    margin-bottom: 0;
+    margin-top: 1vh;
+    width: 5vw;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
 }
 
 .menu ul {
