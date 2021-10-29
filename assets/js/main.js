@@ -12,11 +12,9 @@ const formValidator = new FormValidator(contactUs);
 
 // Toogles off the menu when a link is clicked
 
-
-
 menuLinks.forEach(link => link.addEventListener('click', e => {
-    let hamburguerToogle = document.querySelector('#hamburguer-toogle');
-    hamburguerToogle.checked = false;
+  let hamburguerToogle = document.querySelector('#hamburguer-toogle');
+  hamburguerToogle.checked = false;
 }))
 
 // GRIDS
@@ -25,28 +23,26 @@ let timeout = false;
 const delay = 250;
 
 window.addEventListener('resize', () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => gridConttroler.formatGrids(grids), delay);
+  clearTimeout(timeout);
+  timeout = setTimeout(() => gridConttroler.formatGrids(grids), delay);
 });
 
 window.addEventListener('load', () => {
-    gridConttroler.formatGrids(grids);
+  gridConttroler.formatGrids(grids);
 });
 
 slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
-    if (btn.classList.contains('fa-caret-right')) {
-        const grid = e.target.nextElementSibling;
-        
-        gridConttroler.slideGrid(grid, 'right');
+  if (btn.classList.contains('fa-caret-right')) {
+    const grid = e.target.nextElementSibling;
 
-        return;
-    }
+    gridConttroler.slideGrid(grid, 'right');
 
-    const grid = e.target.previousElementSibling;
-    gridConttroler.slideGrid(grid, 'left');
+    return;
+  }
+
+  const grid = e.target.previousElementSibling;
+  gridConttroler.slideGrid(grid, 'left');
 }));
-
-
 
 //
 //  F.A.Q.
@@ -55,19 +51,15 @@ slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
 const questions = document.querySelectorAll('.question');
 
 questions.forEach(question => question.addEventListener('click', e => {
-    const answer = question.querySelector('p');
-    
-    if(answer.style.display === '') {
-        return answer.style.display = 'block';
-    }
-    
-    if (answer.style.display === 'none') {
-        return answer.style.display = 'block';;
-    }
+  const answer = question.querySelector('p');
 
-    answer.style.display = 'none';
+  if (answer.style.display === '') {
+    return answer.style.display = 'block';
+  }
+
+  if (answer.style.display === 'none') {
+    return answer.style.display = 'block';;
+  }
+
+  answer.style.display = 'none';
 }))
-
-console.log(slideBtns)
-
-

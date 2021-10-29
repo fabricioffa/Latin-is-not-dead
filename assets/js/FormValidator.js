@@ -38,9 +38,7 @@ export default class FormValidator {
                 this.displayErrors(input, `${input.getAttribute('name')} must contain letter only.`)
                 valid = false;
             }
-
         })
-
 
         return valid;
     }
@@ -58,7 +56,6 @@ export default class FormValidator {
 
         return empties;
     }
-
 
     displayErrors(element, text) {
         const errorElement = this.createErrorElement(text);
