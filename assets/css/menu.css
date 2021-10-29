@@ -41,6 +41,10 @@
     color: var(--secondary-color);
 }
 
+.arrow-up:hover {
+    transform: translateY(-2vh);
+}
+
 
     /* -=======
       MOBILE
