@@ -16,9 +16,10 @@
 }
 
 .contact input {
-    height: 3vh;
+    height: 4vh;
     border-radius: var(--global-radius);
     text-indent: 1vw;
+    font-size: 18px;
 }
 
 .contact textarea {

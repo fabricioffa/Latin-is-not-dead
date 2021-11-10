@@ -1,7 +1,6 @@
 export default class FormValidator {
     constructor(form) {
         this.form = form;
-        this.errorMessages = [];
         this.event();
     }
 
@@ -24,7 +23,7 @@ export default class FormValidator {
 
     isValid() {
         let valid = true;
-        const { name, surname, country, email, massage } = this.form;
+        const { name, surname, country, email, message } = this.form;
 
         if (this.areThereEmpties()) return valid = false;
 
@@ -39,6 +38,12 @@ export default class FormValidator {
                 valid = false;
             }
         })
+
+        // if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        //     console.log(email.value)
+        //     this.displayErrors(email, 'Invalid email');
+        //     valid = false;
+        // }
 
         return valid;
     }

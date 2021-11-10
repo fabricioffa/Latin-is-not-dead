@@ -8,7 +8,7 @@ const slideBtns = document.querySelectorAll('.slide-btn');
 
 const formValidator = new FormValidator(contactUs);
 
-// * MENU
+//  MENU
 
 // Toogles off the menu when a link is clicked
 
@@ -17,7 +17,7 @@ menuLinks.forEach(link => link.addEventListener('click', e => {
   hamburguerToogle.checked = false;
 }))
 
-//  * GRIDS
+//  GRIDS
 
 let timeout = false;
 const delay = 250;
@@ -56,7 +56,7 @@ questions.forEach(question => question.addEventListener('click', e => {
   }
 
   if (answer.style.display === 'none') {
-    return answer.style.display = 'block';;
+    return answer.style.display = 'block';
   }
 
   answer.style.display = 'none';
