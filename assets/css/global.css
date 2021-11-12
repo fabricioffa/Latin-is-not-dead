@@ -43,7 +43,7 @@ body {
 }
 
 h1 {
-    font-size: clamp(60px, 4.5vw, 70px);
+    font-size: clamp(60px, 4.5vw, 55px);
 }
 
 h2 {
@@ -51,15 +51,15 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(30px, 3.5vw, 50px);
+    font-size: clamp(30px, 3.5vw, 40px);
 }
 
 h4 {
-    font-size: clamp(25px, 3vw, 40px);
+    font-size: clamp(25px, 3vw, 30px);
 }
 
 h5 {
-    font-size: clamp(20px, 2.5vw, 30px);
+    font-size: clamp(20px, 2.5vw, 20px);
 }
 li {
     list-style: none;

@@ -4,6 +4,8 @@ footer {
     margin: 0 auto;
     border-radius: var(--global-radius);
     background-color: var(--light-primary-color);
+    box-shadow: -1px 3px 10px 5px rgba(5,68,94,0.40);
+
 }
 
 footer div {
