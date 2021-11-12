@@ -29,7 +29,7 @@ export default class FormValidator {
 
         [name, surname, country].forEach(input => {
             if (input.value.length < 2 || input.value.length > 30) {
-                this.displayErrors(input, `${input.getAttribute('name')} must have betweeen 2 and 30 characters.`)
+                this.displayErrors(input, `${input.getAttribute('name')} must have between 2 and 30 characters.`)
                 valid = false;
             }
 

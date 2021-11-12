@@ -1,4 +1,4 @@
-class GridConttroler {
+class GridController {
 
     //  The computedStyle returned is a string containing all columns actual sizes in pxs.
     //  So, to count them, I split the values in the string and return the array's length.  
@@ -26,7 +26,7 @@ class GridConttroler {
         return itemsNum;
     }
 
-    // CountColumns will return how many columns would fit the present screen size, so this number is used to setknow how many itens should be displayed as to display the first line only.
+    // CountColumns will return how many columns would fit the present screen size, so this number is used to set know how many items should be displayed as to display the first line only.
         // This method serves primarily for the good functioning of HideOtherRows method.  
 
     showFirstRow(grid) {
@@ -46,7 +46,7 @@ class GridConttroler {
 
     hideOtherRows(grid) {
 
-        // showFirstRow is called to avoid hidding itens that should be in the first row in that moment
+        // showFirstRow is called to avoid hiding items that should be in the first row in that moment
 
         this.showFirstRow(grid);
 
@@ -63,7 +63,7 @@ class GridConttroler {
         return this;
     }
 
-    // Makes sure only the first row is visible and slideBtns are visibleor hidden. 
+    // Makes sure only the first row is visible and slideBtns are visible or hidden. 
 
     formatGrids(grids) {
         grids.forEach(grid => {
@@ -77,7 +77,7 @@ class GridConttroler {
         return this;
     }
 
-    // Shows if there are hidden itens, otherwise hides them.
+    // Shows if there are hidden items, otherwise hides them.
         // The grid is used as a reference because the buttons were all put one before and the other after the grid
 
     showOrHideSlideBtns(grid) {
@@ -90,31 +90,44 @@ class GridConttroler {
         grid.previousElementSibling.style.display = '';
     }
 
-    // Note that this onyl works after the calling of the methods that set the display attribute
+    // Note that this only works after the calling of the methods that set the display attribute
 
     isAllItemsVisible(grid) {
         const gridItems = Array.from(grid.querySelectorAll('div'));
-        const visibleItens = gridItems.filter(item => item.style.display === 'block');
-        return gridItems.length === visibleItens.length;
+        const visibleItems = gridItems.filter(item => item.style.display === 'block');
+        return gridItems.length === visibleItems.length;
     }
 
     slideGrid(grid, direction) {
         const gridItems = Array.from(grid.querySelectorAll('div'));
         const colsPerRow = this.countColumns(grid);
 
-        // newRowIndes starts as an array of the indexs of the present visible itens
-
+        const visibleItemsIndexes = [];
         let newRowIndex = [];
+
+        // Sets visibleItemsIndexes
+
         gridItems.forEach((item, index) => {
-            if (item.style.display === 'block') newRowIndex.push(index);
+            if (item.style.display === 'block') visibleItemsIndexes.push(index);
         });
+
+        // Hides all items to give a value to its style attribute
 
         gridItems.forEach(item => item.style.display = 'none')
 
+        // Right button
+
         if (direction === 'right') {
 
-            newRowIndex = newRowIndex.map(item => item + colsPerRow);
+            // Calculates the new row indexes by adding the number of columns per row.  
+
+            newRowIndex = visibleItemsIndexes.map(item => item + colsPerRow);
+
+            // Checks if the first index of the new row is out of range, to know if the last items displayed were the last. If so, the first row is again displayed.
+
             if (newRowIndex.at(0) >= gridItems.length) return this.hideOtherRows(grid);
+
+            // Checks if the last index of the new row to be displayed passes the range of items. If so, it shows the last items of the arrays. 
 
             if (newRowIndex.at(-1) > gridItems.length - 1) {
                 gridItems.slice(-colsPerRow)
@@ -123,13 +136,19 @@ class GridConttroler {
                 return;
             }
 
+            // If the new indexes are in the range, they are then displayed
+
             gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
                 .forEach(item => item.style.display = 'block');
 
             return;
         }
 
-        newRowIndex = newRowIndex.map(item => item - colsPerRow);
+        // Left button.
+
+        newRowIndex = visibleItemsIndexes.map(item => item - colsPerRow);
+
+        // If the first index is positive and the last negative, slice returns an empty array. To avoid that, been the first negative, if the last is positive we show the first row, except if the last is zero, in which case we show the last row.  
 
         if (newRowIndex.at(0) < 0 && (newRowIndex.at(-1) + 1) >= 0) {
             if ((newRowIndex.at(-1) + 1) === 0) {
@@ -142,11 +161,13 @@ class GridConttroler {
             return;
         }
 
+        // If the indexes are in range, they are just displayed.
+
         return gridItems.slice(newRowIndex.at(0), newRowIndex.at(-1) + 1)
             .forEach(item => item.style.display = 'block');
     }
 
 }
 
-const instance = new GridConttroler;
+const instance = new GridController;
 export default instance;
