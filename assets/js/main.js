@@ -5,6 +5,7 @@ const menuLinks = document.querySelectorAll('.menu a');
 const grids = document.querySelectorAll('.grid');
 const contactUs = document.querySelector('.contact form');
 const slideBtns = document.querySelectorAll('.slide-btn');
+const questions = document.querySelectorAll('.question');
 
 const formValidator = new FormValidator(contactUs);
 
@@ -19,7 +20,11 @@ menuLinks.forEach(link => link.addEventListener('click', e => {
 
 //  GRIDS
 
-let timeout = false;
+// Hides all rolls but the first, everytime the the window is resized
+  
+  //  The setTimeout and clearTimeout serve to limit the number of time the function is called:
+  //  If the event occour again before the delay, then the last call is aborted 
+let timeout = false; 
 const delay = 250;
 
 window.addEventListener('resize', () => {
@@ -27,9 +32,16 @@ window.addEventListener('resize', () => {
   timeout = setTimeout(() => gridConttroler.formatGrids(grids), delay);
 });
 
+  // The format is also applyed on load event
+
 window.addEventListener('load', () => {
   gridConttroler.formatGrids(grids);
 });
+
+/* Checks for clicks on slideBtns, then calls the slideGrid function
+ with the direction parameter that correspons the button position. */
+
+  // The buttons were allput one before the other after the grid, so as to facilitate getting the grid it is associetate with. 
 
 slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
   if (btn.classList.contains('fa-caret-right')) {
@@ -46,10 +58,12 @@ slideBtns.forEach(btn => btn.addEventListener('click', (e) => {
 
 //  * F.A.Q.
 
-const questions = document.querySelectorAll('.question');
+// Shows or hides the answers every time a question is clicked 
 
 questions.forEach(question => question.addEventListener('click', e => {
   const answer = question.querySelector('p');
+
+  // As at first there is no vlue in the style attribute, it checks for an empty string, so the first click works
 
   if (answer.style.display === '') {
     return answer.style.display = 'block';

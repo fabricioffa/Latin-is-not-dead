@@ -1,5 +1,8 @@
 class GridConttroler {
 
+    //  The computedStyle returned is a string containing all columns actual sizes in pxs.
+    //  So, to count them, I split the values in the string and return the array's length.  
+
     countColumns(grid) {
         const columnsNumber = window.getComputedStyle(grid)
             .getPropertyValue('grid-template-columns')
@@ -7,6 +10,8 @@ class GridConttroler {
             .length;
         return columnsNumber;
     }
+
+    // The same as the previous.
 
     countRows(grid) {
         const rowsNumber = window.getComputedStyle(grid)
@@ -21,7 +26,28 @@ class GridConttroler {
         return itemsNum;
     }
 
+    // CountColumns will return how many columns would fit the present screen size, so this number is used to setknow how many itens should be displayed as to display the first line only.
+        // This method serves primarily for the good functioning of HideOtherRows method.  
+
+    showFirstRow(grid) {
+        const gridItems = Array.from(grid.querySelectorAll('div'));
+        const colsPerRow = this.countColumns(grid);
+        const firstRowCols = gridItems.slice(0, colsPerRow);
+
+        for (let col of firstRowCols) {
+            col.style.display = 'block';
+        };
+
+        return this;
+    }
+
+
+    // Hides all rows but the first.
+
     hideOtherRows(grid) {
+
+        // showFirstRow is called to avoid hidding itens that should be in the first row in that moment
+
         this.showFirstRow(grid);
 
         if (this.countRows(grid) > 1) {
@@ -37,31 +63,24 @@ class GridConttroler {
         return this;
     }
 
-    showFirstRow(grid) {
-        const gridItems = Array.from(grid.querySelectorAll('div'));
-        const colsPerRow = this.countColumns(grid);
-        const firstRowCols = gridItems.slice(0, colsPerRow);
-
-        for (let col of firstRowCols) {
-            col.style.display = 'block';
-        };
-
-        return this;
-    }
+    // Makes sure only the first row is visible and slideBtns are visibleor hidden. 
 
     formatGrids(grids) {
         grids.forEach(grid => {
 
             if (grid.classList.contains('intro-grid')) return;
             this.hideOtherRows(grid)
-            this.ShowOrHideSlideBtns(grid);
+            this.showOrHideSlideBtns(grid);
             
         });
 
         return this;
     }
 
-    ShowOrHideSlideBtns(grid) {
+    // Shows if there are hidden itens, otherwise hides them.
+        // The grid is used as a reference because the buttons were all put one before and the other after the grid
+
+    showOrHideSlideBtns(grid) {
         if (this.isAllItemsVisible(grid)) {
             grid.nextElementSibling.style.display = 'none';
             grid.previousElementSibling.style.display = 'none';
@@ -70,6 +89,8 @@ class GridConttroler {
         grid.nextElementSibling.style.display = '';
         grid.previousElementSibling.style.display = '';
     }
+
+    // Note that this onyl works after the calling of the methods that set the display attribute
 
     isAllItemsVisible(grid) {
         const gridItems = Array.from(grid.querySelectorAll('div'));
@@ -80,6 +101,8 @@ class GridConttroler {
     slideGrid(grid, direction) {
         const gridItems = Array.from(grid.querySelectorAll('div'));
         const colsPerRow = this.countColumns(grid);
+
+        // newRowIndes starts as an array of the indexs of the present visible itens
 
         let newRowIndex = [];
         gridItems.forEach((item, index) => {
