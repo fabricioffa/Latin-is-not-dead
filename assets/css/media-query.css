@@ -62,8 +62,8 @@
     z-index: 3;
   }
 
-  #hamburguer-toogle:checked + .menu-container {
-    animation: slidein .8s ease-in-out normal;
+  #hamburger-toggle:checked + .menu-container {
+    animation: slideIn .8s ease-in-out normal;
     display: flex;
   }
 

@@ -14,7 +14,7 @@ const formValidator = new FormValidator(contactUs);
 // Toggles off the menu when a link is clicked
 
 menuLinks.forEach(link => link.addEventListener('click', e => {
-  let hamburgerToggle = document.querySelector('#hamburguer-toogle');
+  let hamburgerToggle = document.querySelector('#hamburger-toggle');
   hamburgerToggle.checked = false;
 }))
 
@@ -32,7 +32,7 @@ window.addEventListener('resize', () => {
   timeout = setTimeout(() => gridController.formatGrids(grids), delay);
 });
 
-  // The format is also applyed on load event
+  // The format is also applied on load event
 
 window.addEventListener('load', () => {
   gridController.formatGrids(grids);
