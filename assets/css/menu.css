@@ -37,6 +37,7 @@
 }
 
 .arrow-up {
+    display: none;
     position: fixed;
     bottom: 2vh;
     right: 11vw;
