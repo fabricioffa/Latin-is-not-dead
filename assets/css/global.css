@@ -43,19 +43,19 @@ body {
 }
 
 h1 {
-    font-size: clamp(60px, 4.5vw, 55px);
+    font-size: clamp(60px, 4.5vw, 45px);
 }
 
 h2 {
-    font-size: clamp(35px, 4vw, 50px);
+    font-size: clamp(35px, 4vw, 40px);
 }
 
 h3 {
-    font-size: clamp(30px, 3.5vw, 40px);
+    font-size: clamp(30px, 3.5vw, 30px);
 }
 
 h4 {
-    font-size: clamp(25px, 3vw, 30px);
+    font-size: clamp(25px, 3vw, 25px);
 }
 
 h5 {
@@ -115,7 +115,7 @@ img {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5vh 1vw;
     padding: 6vh 0vw 2vh 0vw;
     transition: all .5s ease-in-out;
