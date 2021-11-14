@@ -23,11 +23,12 @@ export default class FormValidator {
 
     isValid() {
         let valid = true;
-        const { name, surname, country, email, message } = this.form;
+        const { name, surname, country, email} = this.form;
+        const firstThreeInputs = [name, surname, country]
 
-        if (this.areThereEmpties()) return valid = false;
-
-        [name, surname, country].forEach(input => {
+        if (this.areThereEmpties()) valid = false;
+        
+        firstThreeInputs.forEach(input => {
             if (input.value.length < 2 || input.value.length > 30) {
                 this.displayErrors(input, `${input.getAttribute('name')} must have between 2 and 30 characters.`)
                 valid = false;
@@ -39,11 +40,13 @@ export default class FormValidator {
             }
         })
 
-        // if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        //     console.log(email.value)
-        //     this.displayErrors(email, 'Invalid email');
-        //     valid = false;
-        // }
+        // tests for foo@foo.bar and no multiple @
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            console.log(email.value)
+            this.displayErrors(email, 'Invalid email');
+            valid = false;
+        }
 
         return valid;
     }
