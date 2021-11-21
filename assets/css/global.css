@@ -34,32 +34,32 @@ html {
 }
 
 body {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     ;
     line-height: 3rem;
     /* move out the  nav bar */
-    margin-top: 7rem;
+    margin-top: 15vh;
 }
 
 h1 {
-    font-size: clamp(60px, 4.5vw, 45px);
+    font-size: clamp(30px, 3.5vw, 50px);
 }
 
 h2 {
-    font-size: clamp(35px, 4vw, 40px);
+    font-size: clamp(23px, 2.5vw, 35px);
 }
 
 h3 {
-    font-size: clamp(30px, 3.5vw, 30px);
+    font-size: clamp(18px, 2vw, 30px);
 }
 
 h4 {
-    font-size: clamp(25px, 3vw, 25px);
+    font-size: clamp(18px, 1.5vw, 25px);
 }
 
 h5 {
-    font-size: clamp(20px, 2.5vw, 20px);
+    font-size: clamp(18px, 2vw, 20px);
 }
 li {
     list-style: none;
@@ -88,24 +88,6 @@ img {
     margin: 7vh 10%;
 }
 
-.bg-img {
-    position: fixed;
-    bottom: 0;
-    height: 90vh;
-    width: 9vw;
-    opacity: 0.3;
-    margin: 0;
-    /* Exception to global img settings*/
-}
-
-.left {
-    left: 1vh;
-}
-
-.right {
-    right: 1vh;
-}
-
 .header {
     padding: 6vh 0vh;
     border-bottom: 6px double #fff;
@@ -115,7 +97,7 @@ img {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 5vh 1vw;
     padding: 6vh 0vw 2vh 0vw;
     transition: all .5s ease-in-out;

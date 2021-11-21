@@ -7,6 +7,7 @@ const contactUs = document.querySelector(".contact form");
 const slideBtns = document.querySelectorAll(".slide-btn");
 const questions = document.querySelectorAll(".question");
 const arrowUp = document.querySelector(".arrow-up");
+const hamburgerToggle = document.querySelector('#hamburger-toggle');
 
 const formValidator = new FormValidator(contactUs);
 

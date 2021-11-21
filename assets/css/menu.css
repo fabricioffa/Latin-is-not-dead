@@ -6,9 +6,12 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    width: 100%;
 
-    background: var(--light-primary-color);
+    width: 100%;
+    border-radius:0 0 15px 15px;
+    box-shadow: 0px 2px 5px 3px rgba(5,68,94,0.40);
+
+    background: var(--primary-color);
 }
 
 .menu img {
@@ -22,18 +25,18 @@
 
 .menu ul {
     display: flex;
-    font-size: clamp(20px, 3.5vw, 40px);
+    font-size: clamp(20px, 2.5vw, 30px);
 }
 
 .menu li a {
     display: block;
-    padding: 2rem 4rem;
+    padding: 2vh 3vw;
     transition: all 0.3s ease-in-out;
 }
 
 .menu li a:hover {
     border-radius: var(--global-radius);
-    background-color: var(--primary-color);
+    background-color: var(--light-primary-color);
 }
 
 .arrow-up {
