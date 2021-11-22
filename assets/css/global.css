@@ -162,6 +162,7 @@ button:active {
 }
 
 .grid-item {
+  padding: 2vh 2vw;
   background-color: var(--light-primary-color);
   border-radius: var(--global-radius);
   box-shadow: var(--global-box-shadow)
