@@ -1,8 +1,4 @@
 class GridController {
-
-    //  The computedStyle returned is a string containing all columns actual sizes in pxs.
-    //  So, to count them, I split the values in the string and return the array's length.  
-
     countColumns(grid) {
         const columnsNumber = window.getComputedStyle(grid)
             .getPropertyValue('grid-template-columns')
@@ -10,8 +6,6 @@ class GridController {
             .length;
         return columnsNumber;
     }
-
-    // The same as the previous.
 
     countRows(grid) {
         const rowsNumber = window.getComputedStyle(grid)

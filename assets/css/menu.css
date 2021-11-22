@@ -43,7 +43,7 @@
     display: none;
     position: fixed;
     bottom: 2vh;
-    right: 11vw;
+    right: 2vw;
     z-index: 2;
     font-size: clamp(70px, 6vw, 90px);
     color: var(--secondary-color);

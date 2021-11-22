@@ -48,10 +48,6 @@
     padding: 1.5vw;
   }
 
-  .arrow-up {
-    right: 2vw;
-  }
-
   /* Footer */
 
   footer {
@@ -76,13 +72,9 @@
     text-align: center;
   }
 
-  .menu h1 {
-    font-size: 5rem;
-  }
-
   .menu ul {
     width: 100vw;
-    font-size: 3rem;
+    font-size: 5vh;
   }
 
   section {
