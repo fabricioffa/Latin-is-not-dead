@@ -1,0 +1,31 @@
+.product-info {
+  margin: 3vh 0;
+}
+
+.product-info h3 {
+  margin-bottom: 4vh;
+}
+
+.price-info {
+  display: flex;
+  flex-flow: column;
+  row-gap: 5vh;
+  margin: 3vh 0;
+}
+
+.postal-calc {
+  display: flex;
+  flex-flow: column;
+  row-gap: 2vh;
+}
+
+.product button {
+  height: 6vh;
+  width: 50%;
+}
+
+.product input {
+  width: 60%;
+  align-self: center;
+}
+

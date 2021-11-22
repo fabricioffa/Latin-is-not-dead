@@ -1,13 +1,5 @@
-.course-grid-item {
-    position: relative;
+.course.grid-item {
     padding: 2vh 2vw;
-    background: var(--light-primary-color);
-    border-radius: var(--global-radius);
-    box-shadow: var(--global-box-shadow);
     text-align: center;
 }
 
-.course-grid-item:hover {
-    box-shadow: var(--global-box-shadow-on-hover);
-    transform: scale(1.02);
-}

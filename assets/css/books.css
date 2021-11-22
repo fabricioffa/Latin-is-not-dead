@@ -1,24 +1,3 @@
-.books-grid-item {
-    position: relative;
-    padding: 2vh 2vw;
-    background-color: var(--light-primary-color);
-    border-radius: var(--global-radius);
-    box-shadow: var(--global-box-shadow);
-}
-
-.books-grid-item:hover {
-    box-shadow: var(--global-box-shadow-on-hover);
-    transform: scale(1.02);
-}
-
-.grid-item-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .books p {
     font-weight: bold;
 }
