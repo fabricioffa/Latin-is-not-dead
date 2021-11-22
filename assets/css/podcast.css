@@ -1,3 +1,7 @@
+.podcast .grid-item {
+  padding: 0;
+}
+
 .podcast h4 {
     padding: 2vh 0;
     border-bottom: 4px dashed #fff;
