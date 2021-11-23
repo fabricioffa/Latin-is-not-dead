@@ -1,5 +1,17 @@
+.product .grid {
+  gap: 5vh 0vw;
+}
+
+.product img {
+  margin: 0;
+  align-self: center;
+}
+
 .product-info {
-  margin: 3vh 0;
+  background-color: var(--light-primary-color);
+  border-radius: 15px 0px 0 15px;
+  padding: 2vh 2vw;
+  margin: 3vh 0 3vh 1vw;
 }
 
 .product-info h3 {
@@ -10,7 +22,12 @@
   display: flex;
   flex-flow: column;
   row-gap: 5vh;
+  position: relative;
+  background-color: var(--light-primary-color);
+  border-radius: 0 15px 15px 0;
   margin: 3vh 0;
+  padding: 2vh 0;
+  border-left: 4px dashed #fff;
 }
 
 .postal-calc {
