@@ -1,75 +1,80 @@
 .menu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    position: fixed;
-    top: 0;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 
-    width: 100%;
-    border-radius:0 0 15px 15px;
-    box-shadow: 0px 2px 5px 3px rgba(5,68,94,0.40);
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 2px 5px 3px rgba(5, 68, 94, 0.4);
 
-    background: var(--primary-color);
+  background: var(--primary-color);
 }
 
 .menu img {
-    margin: 1vh 0 0 1vh;
-    width: max(80px, 5vw);
+  margin: 1vh 0 0 1vh;
+  width: max(80px, 5vw);
 }
 
+
 .menu img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .menu ul {
-    display: flex;
-    font-size: clamp(20px, 2.5vw, 30px);
+  display: flex;
+  font-size: clamp(20px, 2.5vw, 30px);
 }
 
 .menu li a {
-    display: block;
-    padding: 2vh 3vw;
-    transition: all 0.3s ease-in-out;
+  display: block;
+  padding: 2vh 3vw;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu li a:hover {
-    border-radius: var(--global-radius);
-    background-color: var(--light-primary-color);
+  border-radius: var(--global-radius);
+  background-color: var(--light-primary-color);
 }
 
 .arrow-up {
-    display: none;
-    position: fixed;
-    bottom: 2vh;
-    right: 2vw;
-    z-index: 2;
-    font-size: clamp(70px, 6vw, 90px);
-    color: var(--secondary-color);
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  z-index: 2;
+  font-size: clamp(70px, 6vw, 90px);
+  color: var(--secondary-color);
 }
 
 .arrow-up:hover {
-    transform: translateY(-2vh);
+  transform: translateY(-2vh);
+}
+
+.cart {
+  width: max(70px, 5vw);
 }
 
 
-    /* -=======
-      MOBILE
-    ========*/
+/* -=======
+MOBILE
+========*/
 
 #hamburger-toggle {
-    position: absolute;
-    top: -5vh;
-    z-index: 3;
+  position: absolute;
+  top: -5vh;
+  z-index: 3;
 }
 
 .nav-icons label {
-    display: none;
-    position: fixed;
-    top: 1vh;
-    right: 2vw;
-    z-index: 2;
-    font-size: 40px;
-    color: #fff;
+  display: none;
+  position: fixed;
+  top: 1vh;
+  right: 2vw;
+  z-index: 2;
+  font-size: 40px;
+  color: #fff;
 }
