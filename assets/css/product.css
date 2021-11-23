@@ -22,7 +22,6 @@
   display: flex;
   flex-flow: column;
   row-gap: 5vh;
-  position: relative;
   background-color: var(--light-primary-color);
   border-radius: 0 15px 15px 0;
   margin: 3vh 0;

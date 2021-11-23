@@ -7,9 +7,44 @@ const contactUs = document.querySelector(".contact form");
 const slideBtns = document.querySelectorAll(".slide-btn");
 const questions = document.querySelectorAll(".question");
 const arrowUp = document.querySelector(".arrow-up");
-const hamburgerToggle = document.querySelector('#hamburger-toggle');
+const hamburgerToggle = document.querySelector("#hamburger-toggle");
 
 const formValidator = new FormValidator(contactUs);
+
+const links = document.links;
+const productInfo = {};
+
+for (const link of links) {
+  link.addEventListener("click", (e) => {
+    if (link.getAttribute("href") === "./product.html") {
+      const priceEl = link.previousElementSibling;
+      productInfo.price = priceEl.innerText;
+      const imgSrcEl = priceEl.previousElementSibling;
+      productInfo.imgSrc = imgSrcEl.getAttribute("src");
+      productInfo.imgAlt = imgSrcEl.getAttribute("alt");
+      productInfo.name = imgSrcEl.previousElementSibling.innerText;
+
+      e.preventDefault();
+      loadPage(link.getAttribute("href")).then(() => {
+        document.querySelector('.header').innerText = productInfo.name;
+        document.querySelector('.product img').setAttribute('src', productInfo.imgSrc);
+        document.querySelector('.product img').setAttribute('alt', productInfo.imgAlt);
+        document.querySelector('.price-info h3').innerText = productInfo.price;
+      })
+
+    }
+  });
+}
+
+async function loadPage(url) {
+  await fetch(url)
+    .then((response) => response.text())
+    .then((html) => displayPage(html));
+}
+
+function displayPage(newContent) {
+  document.documentElement.innerHTML = newContent;
+}
 
 //  MENU
 
@@ -38,18 +73,18 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", () => {
-    if (!throttled) {
-      if (window.scrollY >= document.documentElement.clientHeight) {
-        arrowUp.style.display = "inline-block";
-        return;
-      }
-      
-      arrowUp.style.display = "none";
+  if (!throttled) {
+    if (window.scrollY >= document.documentElement.clientHeight) {
+      arrowUp.style.display = "inline-block";
+      return;
+    }
 
-      throttled = true;
+    arrowUp.style.display = "none";
 
-      setTimeout(() => throttled = false, delay);
-    }      
+    throttled = true;
+
+    setTimeout(() => (throttled = false), delay);
+  }
 });
 
 window.addEventListener("load", () => {
