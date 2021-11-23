@@ -5,7 +5,7 @@ export default class FormValidator {
     }
 
     event() {
-        this.form.addEventListener('submit', e => {
+        this.form?.addEventListener('submit', e => {
             this.eventHandler(e)
         })
     }
@@ -27,7 +27,7 @@ export default class FormValidator {
         const firstThreeInputs = [name, surname, country]
 
         if (this.areThereEmpties()) valid = false;
-        
+
         firstThreeInputs.forEach(input => {
             if (input.value.length < 2 || input.value.length > 30) {
                 this.displayErrors(input, `${input.getAttribute('name')} must have between 2 and 30 characters.`)
