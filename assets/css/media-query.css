@@ -4,10 +4,12 @@
     margin: 0;
     /* Nav is no more on the top*/
   }
+
   section {
     padding-left: 20%;
     /* Logo is now on the left*/
   }
+
   .main-content {
     border-radius: var(--global-radius);
     background-color: var(--primary-color);
@@ -16,6 +18,7 @@
     max-width: 100%;
     min-height: 100vh;
   }
+
   .bg-img {
     display: none;
   }
@@ -31,13 +34,14 @@
     height: 100%;
     overflow: auto;
     box-shadow: none;
-    border-radius:0 15px 15px 0;
-
+    border-radius: 0 15px 15px 0;
   }
+
   .menu h1 {
     font-size: clamp(45px, 3.5vw, 40px);
     padding: 3vh 2vw 2vh 2vw;
   }
+
   .menu ul {
     font-size: clamp(25px, 3.5vw, 35px);
     height: 85vh;
@@ -53,16 +57,41 @@
   footer {
     margin-left: 25%;
   }
+
+  /* Product Page*/
+
+  .menu .cart {
+    display: none;
+  }
+
+  .product .grid {
+    gap: 5vh 1vw;
+  }
+
+  .product .grid .product-info{
+    grid-row-start: 2 ;
+    grid-column-start: span 2 ;
+  }
+
+  .product-info {
+    border-radius: var(--global-radius);
+  }
+
+  .price-info {
+    border-radius: var(--global-radius);
+    border: none;
+  }
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .nav-icons label {
     display: initial;
     z-index: 3;
   }
 
   #hamburger-toggle:checked + .menu-container {
-    animation: slideIn .8s ease-in-out normal;
+    animation: slideIn 0.8s ease-in-out normal;
     display: flex;
   }
 
@@ -88,7 +117,45 @@
     margin: 0;
     width: 100%;
   }
+
+  /* Porduct Page */
+
+  .product .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5vh 1vw;
+  }
+
+  .product .grid img {
+    width: 300px;
+    justify-self: center;
+  }
+
+  .grid .price-info img {
+    width: 70px
+  }
+
+  .product .grid .product-info{
+    grid-row-start: 3 ;
+    grid-column-start: span 2;
+  }
+
+  .product-info {
+    border-radius: var(--global-radius);
+  }
+
+  .price-info {
+    border-radius: var(--global-radius);
+    border: none;
+  }
 }
+
+@media screen and (max-width: 632px) {
+  .product .grid .product-info{
+    grid-row-start: 3 ;
+    grid-column-start: unset;
+  }
+}
+
 
 @media screen and (max-width: 320px) {
   .grid {
