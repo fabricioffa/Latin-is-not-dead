@@ -21,7 +21,7 @@ class GridController {
     }
 
     // CountColumns will return how many columns would fit the present screen size, so this number is used to set know how many items should be displayed as to display the first line only.
-        // This method serves primarily for the good functioning of HideOtherRows method.  
+        // This method serves primarily for the good functioning of HideOtherRows method.
 
     showFirstRow(grid) {
         const gridItems = Array.from(grid.querySelectorAll('div'));
@@ -57,15 +57,16 @@ class GridController {
         return this;
     }
 
-    // Makes sure only the first row is visible and slideBtns are visible or hidden. 
+    // Makes sure only the first row is visible and slideBtns are visible or hidden.
 
     formatGrids(grids) {
         grids.forEach(grid => {
 
             if (grid.classList.contains('intro-grid')) return;
+            if (grid.classList.contains('product-grid')) return;
             this.hideOtherRows(grid)
             this.showOrHideSlideBtns(grid);
-            
+
         });
 
         return this;
@@ -113,7 +114,7 @@ class GridController {
 
         if (direction === 'right') {
 
-            // Calculates the new row indexes by adding the number of columns per row.  
+            // Calculates the new row indexes by adding the number of columns per row.
 
             newRowIndex = visibleItemsIndexes.map(item => item + colsPerRow);
 
@@ -121,7 +122,7 @@ class GridController {
 
             if (newRowIndex.at(0) >= gridItems.length) return this.hideOtherRows(grid);
 
-            // Checks if the last index of the new row to be displayed passes the range of items. If so, it shows the last items of the arrays. 
+            // Checks if the last index of the new row to be displayed passes the range of items. If so, it shows the last items of the arrays.
 
             if (newRowIndex.at(-1) > gridItems.length - 1) {
                 gridItems.slice(-colsPerRow)
@@ -142,7 +143,7 @@ class GridController {
 
         newRowIndex = visibleItemsIndexes.map(item => item - colsPerRow);
 
-        // If the first index is positive and the last negative, slice returns an empty array. To avoid that, been the first negative, if the last is positive we show the first row, except if the last is zero, in which case we show the last row.  
+        // If the first index is positive and the last negative, slice returns an empty array. To avoid that, been the first negative, if the last is positive we show the first row, except if the last is zero, in which case we show the last row.
 
         if (newRowIndex.at(0) < 0 && (newRowIndex.at(-1) + 1) >= 0) {
             if ((newRowIndex.at(-1) + 1) === 0) {
