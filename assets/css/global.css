@@ -162,6 +162,7 @@ button:active {
 }
 
 .grid-item {
+  position: relative;
   padding: 2vh 2vw;
   background-color: var(--light-primary-color);
   border-radius: var(--global-radius);
