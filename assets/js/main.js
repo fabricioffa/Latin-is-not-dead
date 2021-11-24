@@ -8,6 +8,8 @@ const slideBtns = document.querySelectorAll(".slide-btn");
 const questions = document.querySelectorAll(".question");
 const arrowUp = document.querySelector(".arrow-up");
 const hamburgerToggle = document.querySelector("#hamburger-toggle");
+const addToCartBtn = document.querySelector('.price-info button:nth-last-of-type(2)');
+
 
 const formValidator = new FormValidator(contactUs);
 
@@ -17,7 +19,7 @@ const formValidator = new FormValidator(contactUs);
 // Toggles off the menu when a link is clicked
 
 menuLinks.forEach((link) =>
-  link.addEventListener("click", (e) => {
+link.addEventListener("click", (e) => {
     let hamburgerToggle = document.querySelector("#hamburger-toggle");
     hamburgerToggle.checked = false;
   })
@@ -58,23 +60,23 @@ window.addEventListener("load", () => {
 });
 
 /* Checks for clicks on slideBtns, then calls the slideGrid function
- with the direction parameter that corresponds the button position. */
+with the direction parameter that corresponds the button position. */
 
 // The buttons were all put one before the other after the grid, so as to facilitate getting the grid it is associated with.
 
 slideBtns.forEach((btn) =>
-  btn.addEventListener("click", (e) => {
-    if (btn.classList.contains("fa-caret-right")) {
-      const grid = e.target.nextElementSibling;
+btn.addEventListener("click", (e) => {
+  if (btn.classList.contains("fa-caret-right")) {
+    const grid = e.target.nextElementSibling;
 
-      gridController.slideGrid(grid, "right");
+    gridController.slideGrid(grid, "right");
 
-      return;
-    }
+    return;
+  }
 
-    const grid = e.target.previousElementSibling;
-    gridController.slideGrid(grid, "left");
-  })
+  const grid = e.target.previousElementSibling;
+  gridController.slideGrid(grid, "left");
+})
 );
 
 //  * F.A.Q.
@@ -82,13 +84,13 @@ slideBtns.forEach((btn) =>
 // Shows or hides the answers every time a question is clicked
 
 questions.forEach((question) =>
-  question.addEventListener("click", (e) => {
-    const answer = question.querySelector("p");
+question.addEventListener("click", (e) => {
+  const answer = question.querySelector("p");
 
-    // As at first there is no value in the style attribute, it checks for an empty string, so the first click works
+  // As at first there is no value in the style attribute, it checks for an empty string, so the first click works
 
-    if (answer.style.display === "") {
-      return (answer.style.display = "block");
+  if (answer.style.display === "") {
+    return (answer.style.display = "block");
     }
 
     if (answer.style.display === "none") {
@@ -97,4 +99,26 @@ questions.forEach((question) =>
 
     answer.style.display = "none";
   })
-);
+  );
+
+  // Product
+
+
+  addToCartBtn?.addEventListener('click', (e) => {
+
+    if (addToCartBtn.innerText === 'Continue') {
+      window.location.href = '/index.html';
+      return;
+    }
+
+      let itemsCounter = getComputedStyle(document.documentElement)
+      .getPropertyValue('--items-counter').replace(/"|"/g, '');
+
+    console.log(itemsCounter)
+
+    document.documentElement.style
+    .setProperty('--items-counter', `\'${++itemsCounter}\'`);
+
+    addToCartBtn.innerText = 'Continue';
+
+  });
