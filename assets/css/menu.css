@@ -47,9 +47,8 @@
 .cart-container:hover::after {
   transform: scale(.8);
 }
-
-
-.cart-container img:hover {
+  
+.menu img:hover {
   transform: scale(.9);
 }
 
